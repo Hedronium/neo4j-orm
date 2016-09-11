@@ -5,3 +5,5 @@ var db = new neo4j({},function(err){
 	console.log(err);
 
 });
+
+db.getNodeById(14);
