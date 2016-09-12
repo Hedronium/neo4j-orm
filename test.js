@@ -6,4 +6,6 @@ var db = new neo4j({},function(err){
 
 });
 
-db.getNodeById(14);
+db.getNodeById(14,function(err){
+	console.log(err);
+});
