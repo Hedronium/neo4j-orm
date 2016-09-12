@@ -13,6 +13,7 @@ db.getNodeById(14,function(err){
 */
 db.cypherQuery({ query:'MATCH (n) RETURN n LIMIT {id}', params: {"id" : 2}},function(err,res){
 
-		console.log(res[1][0].data);
-
+		console.log(res);
 });
+
+ 
