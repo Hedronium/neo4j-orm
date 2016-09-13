@@ -5,7 +5,7 @@ a query builder for neo4j
 > Grab it using npm.
 
 ```bash
-npm install -g neo4j-orm
+npm install neo4j-orm
 ```
 
 # Usage #
@@ -28,7 +28,7 @@ OR
 ```js
 
 var db =  new neo4j({
-
+ connection.http = 'http://',
  connection.host = 'localhost',
  connection.username = 'neo4j',
  connection.password = '123456',
