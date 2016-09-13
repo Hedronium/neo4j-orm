@@ -5,7 +5,7 @@ a query builder for neo4j
 > Grab it using npm.
 
 ```bash
-npm install neo4j-orm
+npm install -g neo4j-orm
 ```
 
 # Usage #
@@ -28,7 +28,7 @@ OR
 ```js
 
 var db =  new neo4j({
- connection.http = 'http://',
+
  connection.host = 'localhost',
  connection.username = 'neo4j',
  connection.password = '123456',
@@ -111,5 +111,19 @@ db.createNode(['n'],{
 }).return(['n']).exec();
 
 ```
+#### Add labels #
+You have to call `addlabel()` to execute the query 
 
+```js
+
+db.createNode(['n'],{
+
+	{
+		name:'Aniruddha',
+		skills: 'php,nodejs'
+	}
+
+}).addlabel(['person']).exec();
+
+```
 

@@ -66,7 +66,7 @@ db.createNode(['n','m','o'],[
 		skills: 'Compiler'
 }
 
-]).exec(function(err){
+]).addlabel(['person','coder']).dump(function(err){
 
 	console.log(err);
 
