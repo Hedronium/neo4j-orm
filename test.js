@@ -21,7 +21,12 @@ db.cypherQuery({ query:'MATCH (n) RETURN n LIMIT {id}', params: {"id" : 2}},func
 
 
 // jodi return korte chao
-db.getLabelByNodeId(14,function(err,res){
+db.createNode(['n'],[
 
-	console.log(res);
-});
+{
+
+        name:'Aniruddha',
+        skills: 'php,nodejs'
+}
+
+]).exec();
