@@ -21,33 +21,7 @@ db.cypherQuery({ query:'MATCH (n) RETURN n LIMIT {id}', params: {"id" : 2}},func
 
 
 // jodi return korte chao
-db.createNode(['n'],{
+db.getLabelByNodeId(14,function(err,res){
 
-	{
-		name:'Aniruddha',
-		skills: 'php,nodejs'
-	},
-	{
-		name:'omran jamal',
-		skills:'markup,php,nodejs'
-	}
-
-}).return().exec();
-
-
-
-
-// jodi created data return korte na chao and multiple node add korte parba ekshathe
-
-db.createNode(['n','m'],{
-
-	{
-		name:'Aniruddha',
-		skills: 'php,nodejs'
-	},
-	{
-		name:'omran jamal',
-		skills:'markup,php,nodejs'
-	}
-
-}).exec();
+	console.log(res);
+});
