@@ -39,6 +39,9 @@ var db =  new neo4j({
 });
 ```
 
+##`Note:` it'll create a `node_id` just like mongo's object_id to create uniquness among created nodes, it'll throw an error if you want to add node_id in the object
+
+
 #### Create single node #
 You have to call `exec()` to execute the query 
 
