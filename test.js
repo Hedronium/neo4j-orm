@@ -21,6 +21,7 @@ db.cypherQuery({ query:'MATCH (n) RETURN n LIMIT {id}', params: {"id" : 2}},func
 
 
 // jodi return korte chao
+/*
 db.createNode(['n','m','o'],[
 
 {
@@ -39,4 +40,34 @@ db.createNode(['n','m','o'],[
 		skills: 'Compiler'
 }
 
-]).return().dump();
+]).return(['m']).dump(function(data){
+
+	console.log(data);
+
+});
+
+*/
+
+db.createNode(['n','m','o'],[
+
+{
+
+        name:'Aniruddha',
+        skills: 'php,nodejs'
+},
+{
+		name: 'Omran jamal',
+		skills: 'markup'
+
+},
+
+{
+		name:'Nahiyan Alamgir',
+		skills: 'Compiler'
+}
+
+]).exec(function(err){
+
+	console.log(err);
+
+});
