@@ -47,7 +47,7 @@ db.createNode(['n','m','o'],[
 });
 
 */
-
+/*
 db.createNode(['n','m','o'],[
 
 {
@@ -71,3 +71,6 @@ db.createNode(['n','m','o'],[
 	console.log(err);
 
 });
+
+*/
+db.getLabelsByNodeId(14);
