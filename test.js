@@ -72,5 +72,88 @@ db.createNode(['n','m','o'],[
 
 });
 
+
+
+			this.http     = connection.http || 'http://';
+			this.host 	  = connection.host || 'localhost';
+			this.username = connection.username || 'neo4j';
+			this.password = connection.password || '123456';
+			this.port 	  = connection.port || '7474';
+			this.url 	  = this.http+this.username+':'+this.password+'@'+this.host+':'+this.port;
+
+			// Data source
+			this.dbLink   	= this.url+'/db/data/';
+			this.relLink  	= this.url+'/db/data/relationship';
+			this.nodeIndex 	= this.url+'/db/data/index/node';
+			this.relIndex 	= this.url+'/db/data/index/relationship';
+			this.extInfo   	= this.url+'/db/data/ext';
+			this.relType 	= this.url+'/db/data/relationship/types';
+			this.batch 		= this.url+'/db/data/batch';
+			this.cypher 	= this.url+'/db/data/cypher';
+			this.indexes 	= this.url+'/db/data/schema/index';
+			this.constraint = this.url+'/db/data/schema/constraint';
+			this.transaction= this.url+'/db/data/transaction';
+			this.labels  	= this.url+'/db/data/labels';
+			this.nodes 		= this.url+'/db/data/node'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			if (nodes.constructor !== Array) {
+
+		  	   throw new Error('nodes should be in an array');
+			}
+
+			if (data.constructor !== Array ) {
+
+				throw new Error('Array should be something');
+			}
+
+			if (validator.uniqueIdCheck(data) === true) {
+
+			   throw new Error('There should be no node_id');
+			
+			}
+
+			// push data into query node
+	
+			for (var i = 0; i < nodes.length; i++) {
+
+				this.querynode.push(nodes[i]);
+
+			}
+
+			for (var j = 0; j < data.length; j++) {
+
+				this.querydata.push(data[j]);
+				data[j].node_id = objectID();
+			}
+
+			if (i !== j) {
+
+				throw new Error('Number of nodes and number of data object must be same!');
+			}
+
+
+			this.queryString = this.queryString+'CREATE ';
+			
+			return this;
+
+
+
+
+
+
+
 */
 db.getLabelsByNodeId(14);
