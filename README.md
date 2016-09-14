@@ -111,7 +111,7 @@ db.createNode(['n'],{
 }).return(['n']).exec();
 
 ```
-#### Add labels #
+#### Add label #
 You have to call `addlabel()` to execute the query 
 
 ```js
@@ -123,7 +123,23 @@ db.createNode(['n'],{
 		skills: 'php,nodejs'
 	}
 
-}).addlabel(['person']).exec();
+}).addlabel('person').exec();
+
+```
+
+#### Add multiple label #
+You have to call `addlabels()` to execute the query 
+
+```js
+
+db.createNode(['n'],{
+
+	{
+		name:'Aniruddha',
+		skills: 'php,nodejs'
+	}
+
+}).addlabels(['person','software developer']).exec();
 
 ```
 
