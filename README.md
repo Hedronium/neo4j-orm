@@ -143,3 +143,31 @@ db.createNode(['n'],{
 
 ```
 
+#### You can add where clause #
+You have to call `where(column,sign,value)` to execute the query 
+
+```js
+
+db.createNode(['n'],{
+
+	{
+		name:'Aniruddha',
+		skills: 'php,nodejs'
+	}
+
+}).addlabels(['person','software developer']).exec();
+
+```
+
+#### Search by label #
+You have to call `matchLabel(node,label)` to execute the query 
+
+```js
+
+ db.matchLabel('n','person').return(['n']).exec(function(err,res){
+
+		console.log(err,res);
+
+});
+
+```

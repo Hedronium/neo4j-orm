@@ -226,7 +226,7 @@ db.match(['n']).where('n.name','=','Aniruddha').return().exec(function(err,res){
 });
  */
  
- db.match(['n']).whereIn('n.name',['Aniruddha','Omran jamal']).return().dump(function(err,res){
+ db.matchLabel('n','person').return(['n']).exec(function(err,res){
 
 		console.log(err,res);
 
