@@ -49,7 +49,63 @@ db.createNode(['n','m','o'],[
 });
  */
 
+db.createNode(['n','m','o'],[
+
+{
+
+        name:'Aniruddha',
+        skills: 'php,nodejs'
+},
+{
+		name: 'Omran jamal',
+		skills: 'markup'
+
+},
+
+{
+		name:'Nahiyan Alamgir',
+		skills: 'Compiler'
+}
+
+]).dump(function(err){
+
+	console.log(err);
+
+});
+
+
+
 /*
+
+
+db.createNode(['n','m','o'],[
+
+{
+
+        name:'Aniruddha',
+        skills: 'php,nodejs'
+},
+{
+		name: 'Omran jamal',
+		skills: 'markup'
+
+},
+
+{
+		name:'Nahiyan Alamgir',
+		skills: 'Compiler'
+}
+
+]).dump(function(err){
+
+	console.log(err);
+
+});
+
+
+
+
+
 db.createNode(['n','m','o'],[
 
 {
