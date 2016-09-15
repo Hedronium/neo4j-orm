@@ -21,6 +21,8 @@ db.cypherQuery({ query:'MATCH (n) RETURN n LIMIT {id}', params: {"id" : 2}},func
 
 
 // jodi return korte chao
+
+
 /*
 db.createNode(['n','m','o'],[
 
@@ -40,13 +42,13 @@ db.createNode(['n','m','o'],[
 		skills: 'Compiler'
 }
 
-]).return(['m']).dump(function(data){
+]).return(['m']).exec(function(data){
 
 	console.log(data);
 
 });
+ */
 
-*/
 /*
 db.createNode(['n','m','o'],[
 
@@ -156,4 +158,13 @@ db.createNode(['n','m','o'],[
 
 
 */
-db.getLabelsByNodeId(14);
+
+
+//db.getLabelsByNodeId(14);
+
+db.match(['n']).where('name','=','Aniruddha').return().dump(function(err,res){
+
+		console.log(err,res);
+
+});
+ 
