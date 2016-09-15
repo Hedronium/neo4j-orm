@@ -218,9 +218,16 @@ db.createNode(['n','m','o'],[
 
 //db.getLabelsByNodeId(14);
 
-db.match(['n']).where('name','=','Aniruddha').return().dump(function(err,res){
+/*
+db.match(['n']).where('n.name','=','Aniruddha').return().exec(function(err,res){
 
 		console.log(err,res);
 
 });
+ */
  
+ db.match(['n']).whereIn('n.name',['Aniruddha','Omran jamal']).return().dump(function(err,res){
+
+		console.log(err,res);
+
+});
