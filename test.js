@@ -49,7 +49,7 @@ db.createNode(['n','m','o'],[
 });
  */
 
-db.createNode(['n','m','o'],[
+ var string =  db.createNode(['n','m','o'],[
 
 {
 
