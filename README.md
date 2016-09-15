@@ -148,16 +148,29 @@ You have to call `where(column,sign,value)` to execute the query
 
 ```js
 
-db.createNode(['n'],{
+db.match(['n']).where('n.name','=','Aniruddha').return().exec(function(err,res){
 
-	{
-		name:'Aniruddha',
-		skills: 'php,nodejs'
-	}
+		console.log(err,res);
 
-}).addlabels(['person','software developer']).exec();
+});
 
 ```
+
+
+#### You can add whereIn clause #
+You have to call `whereIn(node_and_column,[])` to execute the query 
+
+```js
+
+db.match(['n']).whereIn('n.name',['Aniruddha','Omran jamal']).return().exec(function(err,res){
+
+		console.log(err,res);
+
+});
+
+```
+
+
 
 #### Search by label #
 You have to call `matchLabel(node,label)` to execute the query 
